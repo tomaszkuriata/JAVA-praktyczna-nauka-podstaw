@@ -1,0 +1,30 @@
+
+
+import java.util.Scanner;
+public class Koszty
+{
+    public static void main(String[] args) {
+
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("-----Koszt podróży autem dla 4 osób-----");
+
+        System.out.println("Podaj ilość km");
+        double km = scanner.nextDouble();
+        km= km/100;
+        System.out.println("Podaj cenę paliwa/litr");
+        double cena =scanner.nextDouble();
+        System.out.println("Podaj spalanie auta/100km");
+        double spalanie = scanner.nextDouble();
+        System.out.println("Odległość: " + km*100 +" km");
+        System.out.println("Cena Pb95: " + cena +" /litr");
+        System.out.println("Spalanie :" + spalanie + " l/100km");
+
+        System.out.println("Koszt paliwa na danym odcinku wynosi " + km*(cena*spalanie) + " zł");
+
+
+        System.out.println("Koszt na 1 osobę wynosi");
+        double suma = ((km*cena*spalanie)/4);
+        System.out.println(suma);
+
+    }
+}
